@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field &amp; Fold — Skincare, considered</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="wordmark" href="#top">Field &amp; Fold</a>
+    <nav class="site-nav">
+      <a href="#products">Products</a>
+      <a href="#ritual">Daily Ritual</a>
+      <a href="#notes">Field Notes</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="hero-botanical" viewBox="0 0 600 600" aria-hidden="true">
+      <path class="stem" d="M300 560 C 300 400, 260 340, 300 260 C 340 180, 300 120, 300 40"/>
+      <g class="leaves">
+        <path d="M300 460 C 250 440, 220 400, 230 360 C 280 370, 310 410, 300 460 Z"/>
+        <path d="M300 460 C 350 440, 380 400, 370 360 C 320 370, 290 410, 300 460 Z"/>
+        <path d="M300 340 C 250 320, 220 280, 230 240 C 280 250, 310 290, 300 340 Z"/>
+        <path d="M300 340 C 350 320, 380 280, 370 240 C 320 250, 290 290, 300 340 Z"/>
+        <path d="M300 220 C 260 200, 235 170, 245 140 C 285 150, 305 180, 300 220 Z"/>
+      </g>
+    </svg>
+    <div class="wrap hero-inner">
+      <p class="eyebrow">No. 001 — Skin Journal, established this year</p>
+      <h1>Skin, considered.<br>Not sold to.</h1>
+      <p class="hero-sub">Nine formulas, read like ingredient labels &mdash; because that's what they are. Try them, then tell the next person what actually happened to your skin.</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">Read the labels</a>
+        <a href="#notes" class="btn btn-ghost">Leave a field note</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="section products-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag-mono">CATALOG / 9 FORMULAS</span>
+        <h2>The shelf</h2>
+        <p class="section-lede">Every card lists what's actually in the bottle. Ratings below are from people who bought it, not from us.</p>
+      </div>
+
+      <div class="product-grid" id="productGrid"><!-- injected by script.js --></div>
+    </div>
+  </section>
+
+  <!-- RITUAL / TIPS -->
+  <section id="ritual" class="section ritual-section">
+    <div class="wrap">
+      <div class="section-head light">
+        <span class="tag-mono">ROUTINE / AM &amp; PM</span>
+        <h2>The daily ritual</h2>
+        <p class="section-lede">Order matters more than quantity. Here's the sequence, and why each step comes where it does.</p>
+      </div>
+
+      <div class="ritual-columns">
+        <div class="ritual-col">
+          <h3 class="ritual-time">Morning</h3>
+          <ol class="ritual-steps">
+            <li><span class="step-no">01</span><div><strong>Rinse, don't scrub.</strong> Skin sheds overnight; cold water is enough to clear it. Cleanser at night, not both ends of the day.</div></li>
+            <li><span class="step-no">02</span><div><strong>Antioxidant serum, thin layer.</strong> Vitamin C works best on bare skin, before anything oil-based sits on top of it.</div></li>
+            <li><span class="step-no">03</span><div><strong>Moisturize while damp.</strong> Locks in water instead of just sitting on the surface.</div></li>
+            <li><span class="step-no">04</span><div><strong>SPF, always last.</strong> Everything before this is undone if you skip it. Reapply if you're outside past noon.</div></li>
+          </ol>
+        </div>
+        <div class="ritual-col">
+          <h3 class="ritual-time">Evening</h3>
+          <ol class="ritual-steps">
+            <li><span class="step-no">01</span><div><strong>Double cleanse if you wore SPF.</strong> Oil-based first to lift sunscreen, then a gentle wash to clear the rest.</div></li>
+            <li><span class="step-no">02</span><div><strong>Actives on alternating nights.</strong> Retinoids and acids don't need to be nightly &mdash; skin repairs in the gaps.</div></li>
+            <li><span class="step-no">03</span><div><strong>Richer cream, no rush.</strong> Night is the only time skin isn't fighting pollution or UV, so let a heavier layer sit.</div></li>
+            <li><span class="step-no">04</span><div><strong>Hands off after that.</strong> Touching your face at 1am undoes step 3 more than any product choice.</div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIELD NOTES / FEEDBACK -->
+  <section id="notes" class="section notes-section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="tag-mono">LEDGER / COMMUNITY</span>
+        <h2>Field notes</h2>
+        <p class="section-lede">Used something from the shelf? Log it here. Real results, kept in the open, saved on this device.</p>
+      </div>
+
+      <div class="notes-layout">
+        <form id="noteForm" class="note-form" novalidate>
+          <label class="field">
+            <span>Your name</span>
+            <input type="text" id="noteName" placeholder="e.g. R. Alvarez" required>
+          </label>
+
+          <label class="field">
+            <span>Which product</span>
+            <select id="noteProduct" required></select>
+          </label>
+
+          <fieldset class="field rating-field">
+            <legend>Rating</legend>
+            <div class="star-input" id="starInput" role="radiogroup" aria-label="Rating out of 5">
+              <button type="button" class="star" data-value="1" aria-label="1 star">&#9733;</button>
+              <button type="button" class="star" data-value="2" aria-label="2 stars">&#9733;</button>
+              <button type="button" class="star" data-value="3" aria-label="3 stars">&#9733;</button>
+              <button type="button" class="star" data-value="4" aria-label="4 stars">&#9733;</button>
+              <button type="button" class="star" data-value="5" aria-label="5 stars">&#9733;</button>
+            </div>
+            <input type="hidden" id="noteRating" value="0">
+          </fieldset>
+
+          <label class="field">
+            <span>What happened to your skin</span>
+            <textarea id="noteText" rows="4" placeholder="Breakout calmed down after about a week. Slight tingling first two nights, then nothing." required></textarea>
+          </label>
+
+          <button type="submit" class="btn btn-primary">Add to the ledger</button>
+          <p class="form-note">Notes save to this browser only &mdash; nothing is sent anywhere.</p>
+        </form>
+
+        <div class="ledger" id="ledger" aria-live="polite">
+          <!-- injected by script.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <span class="wordmark small">Field &amp; Fold</span>
+    <p>A field journal for a shelf of nine. Not a store &mdash; no checkout, no cart, just notes.</p>
+  </div>
+</footer>
+
+<template id="cardTemplate">
+  <article class="product-card">
+    <div class="card-top">
+      <span class="card-index"></span>
+      <span class="card-type"></span>
+    </div>
+    <h3 class="card-name"></h3>
+    <p class="card-note"></p>
+    <div class="card-ingredients">
+      <span class="ing-label">Key ingredients</span>
+      <p class="ing-list"></p>
+    </div>
+    <div class="card-foot">
+      <div class="card-rating">
+        <span class="stars-display"></span>
+        <span class="rating-count"></span>
+      </div>
+      <span class="card-price"></span>
+    </div>
+  </article>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
